@@ -1,0 +1,101 @@
+<div class="container"> 
+  <div class="card border-0" [@formAnimation]="showForm1 ? 'form1' : (showForm2 ? 'form2' : 'form3')"> 
+    <div class="step-row" >
+      <div id="progress" [style.width]="progressWidth"></div>
+      <div class="step-col"><small>Step1</small></div>
+      <div class="step-col"><small>Step2</small></div>
+      <div class="step-col"><small>Step3</small></div>
+    </div>
+    
+    <form *ngIf="showForm1" [@formAnimation]="'form1'" action="" class="form1">
+      <div class="zone-nom-container">
+        <div class="nom-container">
+          <p [ngClass]="{'error': nameEmpty}">{{nameLabel}}</p>
+          <input type="text" placeholder="nom" [(ngModel)]="name" name="name">
+        </div>
+        <div class="prenom-container">
+          <p [ngClass]="{'error1': prenomEmpty}">{{prenomLabel}}</p>
+          <input type="text" placeholder="prénom" [(ngModel)]="prenom" name="prenom">
+        </div>
+      </div>
+      <div class="id-container">
+        <div class="matricule-container"> 
+          <p [ngClass]="{'error2': matriculeEmpty}">{{matriculeLabel}}</p>
+          <input type="text" placeholder="matricule" [(ngModel)]="matricule" name="matricule">
+        </div>
+        <div class="telephone-container">
+          <p [ngClass]="{'error3': telephoneEmpty}">{{telephoneLabel}}</p>
+          <input type="text" placeholder="telephone" [(ngModel)]="telephone" name="telephone">
+        </div>
+      </div>
+      <div class="email-container">
+        <div class="box-container">
+          <p [ngClass]="{'error4': emailEmpty}">{{emailLabel}}</p>
+          <input type="email" placeholder="Email" [(ngModel)]="email" name="email">
+        </div>
+        <div class="btn-container">
+          <button type="button" (click)="goToNextStep()" class="btn btn-lg btn-primary w-100 fs-6">Suivant</button>
+        </div>
+      </div>
+    </form>
+
+    <form *ngIf="showForm2" [@formAnimation]="'form2'" action="" class="form2">
+      <p style="margin-top: 20px;"> Choisir un rôle pour l'utilisateur</p>
+      <div class="select-container"> 
+        <select name="role" id="role" class="form-select select1" (change)="onRoleChange($event)">
+          <option value="" selected>Role</option>
+          <option value="0">Opex</option>
+          <option value="1">Contre-Maitre</option>
+          <option value="2">Chef-Segment</option>
+          <option value="3">Expert</option>
+          <option value="4">Admin</option>
+          <option value="5">Admin-Secondaire</option>
+        </select>
+        <select name="category" id="category" class="form-select"  [disabled]="selectedRole !== '3'">
+          <option value="1" selected>Catégorie</option>
+          <option value="2">Role</option> 
+        </select>
+      </div>
+      <div class="button-container">
+        <button type="button" (click)="goToPrevStep()" class="btn btn-lg btn-primary w-100 fs-6">Précédent</button>
+        <button type="button" (click)="goToNextStep()" class="btn btn-lg btn-primary w-100 fs-6">Suivant</button>
+      </div>
+    </form>
+
+    <form *ngIf="showForm3" [@formAnimation]="'form3'" action="" class="form3">
+      <div class="site-plant-container">
+        <div class="site-container">
+          <p> Choisir le Site de l'utilisateur</p>
+          <select name="site" id="site" class="form-select select1">
+            <option value="0">Nom du Site</option>
+          </select>
+        </div>
+        <div class="plant-container">
+          <p> Choisir le Plant de l'utilisateur</p>
+          <select name="plant" id="plant" class="form-select select1">
+            <option value="0">Nom du Plant</option>
+          </select>
+        </div>
+      </div>
+      <div class="ligne-segment-container">
+        <div class="segment-container">
+          <p> Choisir le Segment de l'utilisateur</p>
+          <select name="segment" id="segment" class="form-select select1">
+            <option value="0">Nom du Segment</option>
+          </select>
+        </div>
+        <div class="ligne-container">
+          <p> Choisir la Ligne de l'utilisateur</p>
+          <select name="Ligne" id="ligne" class="form-select select1">
+            <option value="0">Nom du Ligne</option>
+          </select>
+        </div>
+      </div>
+      <div class="button-container">
+        <button type="button" (click)="goToPrevStep()" class="btn btn-lg btn-primary w-100 fs-6">Précédent</button>
+        <button type="button" class="btn btn-lg btn-primary w-100 fs-6">Ajouter</button>
+      </div>
+    </form>
+    
+  </div>
+</div>

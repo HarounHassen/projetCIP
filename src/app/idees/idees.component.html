@@ -1,0 +1,130 @@
+<body>
+     <div class="container d-flex justify-content-center align-items-center min-vh-100">
+         <div class="table-container border rounded-4 p-3">
+             <div class="buttons-container">
+                 <input type="search" placeholder="cherchez" class="form-control form-control-lg bg-light fs-6">
+                 <button class="btn btn-outline-primary w-50 fs-6">Cherchez</button>
+                 <button class="btn btn-dark w-50 fs-6" (click)="Ajouter()">Ajouter idée</button>
+             </div>
+             <div class="select-container">
+                 <select class="form-select" name="" id="">
+                     <option value="0">Type</option>
+                 </select>
+                 <select class="form-select" name="" id="">
+                     <option value="0">Initiateur</option>
+                 </select>
+                 <select class="form-select" name="" id="">
+                     <option value="0">Etat</option>
+                 </select>
+                 <select class="form-select" name="" id="">
+                     <option value="0">Contre maître</option>
+                 </select>
+                 <select class="form-select" name="" id="">
+                     <option value="0">Chef Segment </option>
+                 </select>
+                 <select class="form-select" name="" id="">
+                     <option value="0">Expert</option>
+                 </select>
+             </div>
+ 
+             <div class="table-wrapper" style="max-height: 500px; overflow-y: auto; width: 100%;">
+                 <table class="table">
+                     <thead>
+                         <tr>
+                             <th scope="col" class="titre th-td">N° idée</th>
+                             <th scope="col" class="titre">Type d'idée</th>
+                             <th scope="col" class="titre">Nom d'initiateur</th>
+                             <th scope="col" class="titre th-td">Etat</th>
+                             <th scope="col" class="titre th-td">Date</th>
+                             <th scope="col" class="titre">Contre Maitre</th>
+                             <th scope="col" class="titre">Chef Segmen</th>
+                             <th scope="col" class="titre mail">Expert</th>
+                             <th scope="col" class="titre Actions">Actions</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td scope="row">001</td>
+                             <td>Production</td>
+                             <td>Foulen ben foulen</td>
+                             <td>Exécutée</td>
+                             <td type="Date">19/09/2023</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>
+                                 <a type="button"><img src="../assets/images/person.png" (click)="consulter()" alt="" width="30px"></a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td scope="row">001</td>
+                             <td>Qualité</td>
+                             <td>Foulen ben foulen</td>
+                             <td>Validée</td>
+                             <td type="Date">12/09/2023</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>
+                                 <a type="button"><img src="../assets/images/person.png" (click)="consulter()" alt="" width="30px"></a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td scope="row">001</td>
+                             <td>Logistique</td>
+                             <td>Foulen ben foulen</td>
+                             <td>Sélectionée</td>
+                             <td type="Date">08/08/2023</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>
+                                 <a type="button"><img src="../assets/images/person.png" (click)="consulter()" alt="" width="30px"></a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td scope="row">001</td>
+                             <td>Administratif</td>
+                             <td>Foulen ben foulen</td>
+                             <td>Préselectionée</td>
+                             <td type="Date">23/07/2023</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>
+                                 <a type="button"><img src="../assets/images/person.png" (click)="consulter()" alt="" width="30px"></a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td scope="row">001</td>
+                             <td>Qualité</td>
+                             <td>Foulen ben foulen</td>
+                             <td>En attente</td>
+                             <td type="Date">10/07/2023</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>
+                                 <a type="button"><img src="../assets/images/person.png" (click)="consulter()" alt="" width="30px"></a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td scope="row">001</td>
+                             <td>Production</td>
+                             <td>Foulen ben foulen</td>
+                             <td>Réfusée</td>
+                             <td type="Date">25/06/2023</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>Foulen</td>
+                             <td>
+                                 <a type="button"><img src="../assets/images/person.png" (click)="consulter()" alt="" width="30px"></a>
+                             </td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </div>
+         </div>
+     </div>
+ </body>
+ 

@@ -1,0 +1,78 @@
+<body>
+     <div class="container d-flex justify-content-center align-items-center min-vh-100">
+          <div class="table-container border rounded-4 d-4 p-3">
+               <div class="buttons-container">
+                    <input type="search" placeholder="cherchez" class="form-control form-control-lg bg-light fs-6">
+                    <button class="btn   btn-outline-primary w-50 fs-6">Cherchez</button>
+                    <button class="btn  btn-dark w-50 fs-6" (click)="Ajouter()">Ajouter Plant</button>
+               </div>
+               <div class="table-wrapper" style="max-height: 500px; overflow-y: auto; width: 100%;" >
+                    <table class="table">
+                         <thead>
+                              <tr>
+                                   <th scope="col"  class="titre ">TITRE</th>
+                                   <th scope="col"  class="titre ">DESCRIPTION</th>
+                                   <th scope="col"  class="titre ">ASSIGNER</th>
+                              </tr>     
+                         </thead>
+                         <tbody >
+                              <tr>
+                                   <td scope="row" >Opex</td>
+                                   <td>Opex</td>
+                                   <td>
+                                        <div class="form-check form-switch" id="Assigner" >
+                                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td scope="row" >Contre-Maitre</td>
+                                   <td>Contre-Maitre</td>
+                                   <td>
+                                        <div class="form-check form-switch" id="Assigner" >
+                                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td scope="row" >Chef-Segment</td>
+                                   <td>Chef-Segment</td>
+                                   <td>
+                                        <div class="form-check form-switch" id="Assigner" >
+                                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td scope="row" >Expert</td>
+                                   <td>Expert</td>
+                                   <td>
+                                        <div class="form-check form-switch" id="Assigner" >
+                                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td scope="row" >Admin</td>
+                                   <td>Admin</td>
+                                   <td>
+                                        <div class="form-check form-switch" id="Assigner" >
+                                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td scope="row" >Admin-Secondaire</td>
+                                   <td>Admin-Secondaire</td>
+                                   <td>
+                                        <div class="form-check form-switch" id="Assigner" >
+                                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        </div>
+                                   </td>
+                              </tr>
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+     </div>
+</body>

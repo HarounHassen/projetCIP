@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 700px;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Align items to the sides */
+    width: 100%;
+    align-items: center; /* Center vertically */
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.logo{
+    padding-left: 20px;
+}
+
+.logo h4 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+img {
+    margin-right: 3px;
+}
+
+h4 {
+    color: #5800FF;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-weight: 400;
+    margin-left: auto; /* Push the list-container to the right */
+}
+
+.nav-item {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: white;
+    min-width: fit-content;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 25px;
+    top: 100%;
+    border-radius: 7px;
+    border: 1px solid #EEEEEE;
+}
+
+#UserDropdown {
+    margin-left: 50px;
+}
+
+.dropdown-content a {
+    color: #190482;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #EEEDEB;
+}
+
+.show {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.item {
+    font-weight: 600;
+    color: #190482;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        width: 100%;
+    }
+}
+
+#structureDropdown , #adminDropdown{
+    position: absolute;
+    background-color: white;
+    min-width: fit-content;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    left: 102%;
+    top: 15%;
+    overflow: visible;
+    border-radius: 7px;
+    border: 1px solid #EEEEEE;
+}

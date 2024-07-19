@@ -1,0 +1,55 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <h4><a type="button" (click)="navigateToHome()"><img src="../assets/images/letter-c.png" alt=""></a>CIP</h4>
+        </div>
+        <div class="list-container">
+            <div class="dropdown">
+                <a type="button" (click)="toggleMenu('menuDropdown', $event)" class="nav-item item">Menu</a>
+                <div class="dropdown-content" id="menuDropdown" *ngIf="menu.menuDropdown">
+                    <a class="item" type="button">Dashboard</a>
+                    <div class="dropdown" 
+                         (mouseenter)="showStructureDropdown()"
+                         (mouseleave)="hideStructureDropdown()">
+                        <a class="item" type="button" (click)="navigateToStructure()">Structure</a>
+                        <div id="structureDropdown" *ngIf="structure.structureDropdown">
+                            <a class="item" type="button" (click)="navigateToPlant()">Plant</a>
+                            <a class="item" type="button" (click)="navigateToSegment()">Segment</a>
+                            <a class="item" type="button" (click)="navigateToLigne()">Ligne</a>
+                        </div>
+                    </div>   
+                    <a class="item" type="button" (click)="navigateToUtilisateur()">Utilisateur</a>
+                    <a class="item" type="button">Idées</a>
+                    <div class="dropdown"
+                        (mouseenter)="showAdminDropdown()"
+                        (mouseleave)="hideAdminDropdown()">
+                        <a class="item" type="button">Admin</a>
+                        <div id="adminDropdown" *ngIf="admin.adminDropdown">
+                            <a class="item" type="button" (click)="navigateToPlant()">Gestion des Roles</a>
+                            <a class="item" type="button" (click)="navigateToSegment()">Gestion des Permissions</a>
+                            <a class="item" type="button" (click)="navigateToLigne()">Configuration de l'application</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="dropdown">
+                <a type="button" (click)="toggleMenu('LanguageDropdown', $event)" class="nav-item item">Language</a>
+                <div id="LanguageDropdown" class="dropdown-content" *ngIf="menu.LanguageDropdown">
+                    <a type="button" class="item">Anglais</a>
+                    <a class="item" type="button">Français</a>
+                    <a class="item" type="button">Arabe</a>
+                </div>
+            </div>
+            <a type="button" class="nav-item"><img src="../assets/images/notification.png" width="30px" alt=""></a>
+            <div class="dropdown">
+                <a type="button" class="nav-item item" (click)="toggleMenu('UserDropdown', $event)">Nom d'utilisateur <img src="../assets/images/user.png" alt="" width="30px"></a>
+                <div id="UserDropdown" class="dropdown-content" *ngIf="menu.UserDropdown">
+                    <a class="item" type="button" (click)="navigateToProfile()">Profile</a>
+                    <a class="item" type="button" (click)="navigateToParametre()">Paramétres</a>
+                    <a class="item" type="button" (click)="navigateToHome()">Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
