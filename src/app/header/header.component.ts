@@ -97,6 +97,10 @@ export class HeaderComponent {
   navigateToUtilisateur() {
     this.router.navigate(['utilisateur']);
   }
+
+  navigateToIdees(){
+    this.router.navigate(['idees']);
+  }
     
 
 }

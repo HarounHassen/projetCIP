@@ -31,11 +31,20 @@ import { AjouterLigneComponent } from './ajouter-ligne/ajouter-ligne.component';
 import { AjouterUtilisateurComponent } from './ajouter-utilisateur/ajouter-utilisateur.component';
 
 import { DetailsIdeeComponent } from './details-idee/details-idee.component';
+
 import { StructureComponent } from './structure/structure.component';
+
 import { StructurePlantComponent } from './structure-plant/structure-plant.component';
+
 import { StructureSegmentComponent } from './structure-segment/structure-segment.component';
+
 import { LigneComponent } from './ligne/ligne.component';
+
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+
+import { IdeesComponent } from './idees/idees.component';
+
+import { ConfigurationApplicationComponent } from './configuration-application/configuration-application.component';
 
 
 const routes: Routes = [
@@ -113,8 +122,13 @@ const routes: Routes = [
   { path: 'utilisateur', 
     component: UtilisateurComponent
   }
-
-
+  , 
+  { path: 'idees', 
+    component: IdeesComponent
+  },
+  { path: 'configuration-application', 
+    component: ConfigurationApplicationComponent
+  }
 
 ];
 

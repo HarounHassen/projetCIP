@@ -32,6 +32,8 @@ import { AjouterUtilisateurComponent } from './ajouter-utilisateur/ajouter-utili
 import { IdeesComponent } from './idees/idees.component';
 import { DetailsIdeeComponent } from './details-idee/details-idee.component';
 import { GestionRolesComponent } from './gestion-roles/gestion-roles.component';
+import { GestionPermissionsComponent } from './gestion-permissions/gestion-permissions.component';
+import { ConfigurationApplicationComponent } from './configuration-application/configuration-application.component';
 
 
 @NgModule({
@@ -61,6 +63,8 @@ import { GestionRolesComponent } from './gestion-roles/gestion-roles.component';
     IdeesComponent,
     DetailsIdeeComponent,
     GestionRolesComponent,
+    GestionPermissionsComponent,
+    ConfigurationApplicationComponent,
   ],
   imports: [
     BrowserModule,

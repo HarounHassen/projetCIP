@@ -1,0 +1,180 @@
+<body>
+    <div class="container">
+        <div class="card form1" *ngIf="showForm1">
+            <h4>Gérer Configuration</h4>
+            <div class="buttons-container">
+                <input type="search" placeholder="cherchez" class="form-control form-control-lg bg-light fs-6">
+                <button class="btn btn-outline-primary w-50 fs-6">Cherchez</button>
+                <button class="btn btn-dark w-50 fs-6" (click)="Ajouter()">Ajouter Propriété</button>
+            </div>
+            <div class="config-table">
+                <div class="config-header">
+                    <span>Clé</span>
+                </div>
+                <div class="config-item" (click)="showForm2 = true ; showForm1 = false" >MAIL SERVICE CONFIGURATION</div>
+                <div class="config-item" (click)="showForm3 = true ; showForm1 = false" >SMS API CONFIGURATION</div>
+                <div class="config-item" (click)="showForm4 = true ; showForm1 = false" >SMS CONTENT CONFIGURATION</div>
+                <div class="config-item" (click)="showForm5 = true ; showForm1 = false">EMAIL CONTENT CONFIGURATION</div> 
+                <div class="config-item" (click)="showForm6 = true ; showForm1 = false" >EMAIL ADRESSES CONFIGURATION</div>
+                <div class="config-item" (click)="showForm7 = true ; showForm1 = false" >IDEAS BLOCKAGE DATE</div>
+            </div>
+        </div>  
+
+        <div class="form2" *ngIf="showForm2">
+            <div class="form-container" >
+                <h4 class="form-title">MAIL SERVICE CONFIGURATION</h4>
+                <form class="config-form">
+                    <div class="form-group">
+                        <label for="host">Mail server host:</label>
+                        <input type="text" id="host" placeholder="Valeur">
+                    </div>
+                    <div class="form-group">
+                        <label for="port">Mail server port:</label>
+                        <input type="text" id="port" placeholder="Valeur">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mail shared hosting password:</label>
+                        <input type="password" id="password" placeholder="Valeur">
+                    </div>
+                    <div class="form-group">
+                        <label for="user">Mail shared hosting user:</label>
+                        <input type="text" id="user" placeholder="Valeur">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" class="btn btn-secondary" (click)="navigateToMain()">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form2" *ngIf="showForm3">
+            <div class="form-container" >
+                <h4 class="form-title">SMS API CONFIGURATION</h4>
+                <form class="config-form">
+                    <div class="form-group">
+                        <label for="host">Clé:</label>
+                        <input type="text" id="host" placeholder="Valeur">
+                    </div>
+                    <div class="form-group">
+                        <label for="port">URL:</label>
+                        <input type="text" id="port" placeholder="Valeur">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" class="btn btn-secondary" (click)="navigateToMain()">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form2" *ngIf="showForm4">
+            <div class="form-container" >
+                <h4 class="form-title">SMS CONTENT CONFIGURATION</h4>
+                <form class="config-form">
+                    <div class="form-group">
+                        <label for="host">Etat:</label>
+                        <select name="" id="" class="form-select">
+                            <option value="0">Reject</option>
+                            <option value="1">Sélection</option>
+                            <option value="2">Exécution</option>
+                            <option value="3">Retenu</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="port">Message:</label>
+                        <input type="text" id="port" placeholder="Valeur">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" class="btn btn-secondary" (click)="navigateToMain()">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form2" *ngIf="showForm5">
+            <div class="form-container" >
+                <h4 class="form-title">EMAIL CONTENT CONFIGURATION</h4>
+                <form class="config-form">
+                    <div class="form-group">
+                        <label for="host">Destinataire:</label>
+                        <select name="" id="" class="form-select">
+                            <option value="0">Chef Segment</option>
+                            <option value="1">Expert</option>
+                            <option value="2">Contre Maitre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="host">Etat:</label>
+                        <select name="" id="" class="form-select">
+                            <option value="0">Reject</option>
+                            <option value="1">Sélection</option>
+                            <option value="2">Exécution</option>
+                            <option value="3">Retenu</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="port">Message:</label>
+                        <input type="text" id="port" placeholder="Valeur">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" class="btn btn-secondary" (click)="navigateToMain()">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form2" *ngIf="showForm6">
+            <div class="form-container" >
+                <h4 class="form-title">EMAIL ADRESSES CONFIGURATION</h4>
+                <form class="config-form">
+                    <div class="form-group">
+                        <label for="port">Expéditeur:</label>
+                        <input type="email" id="port" placeholder="Adresse">
+                    </div>
+                    <div class="form-group">
+                        <label for="host">Destinataire:</label>
+                        <select name="" id="" class="form-select">
+                            <option value="0">Chef Segment</option>
+                            <option value="1">Expert</option>
+                            <option value="2">Contre Maitre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="port">Adresse:</label>
+                        <input type="email" id="port" placeholder="Adresse">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" class="btn btn-secondary" (click)="navigateToMain()">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form2" *ngIf="showForm7">
+            <div class="form-container" >
+                <h4 class="form-title">IDEAS BLOCKING DATE</h4>
+                <form class="config-form">
+                    <div class="form-group">
+                        <label for="host">Ideas timeslot start:</label>
+                        <input type="date" id="host" >
+                    </div>
+                    <div class="form-group">
+                        <label for="port">Ideas timeslot end:</label>
+                        <input type="date" id="port" >
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" class="btn btn-secondary" (click)="navigateToMain()">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+

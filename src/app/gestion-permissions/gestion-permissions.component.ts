@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import * as XLSX from 'xlsx';
 
+
 @Component({
-  selector: 'app-gestion-roles',
-  templateUrl: './gestion-roles.component.html',
-  styleUrls: ['./gestion-roles.component.css']
+  selector: 'app-gestion-permissions',
+  templateUrl: './gestion-permissions.component.html',
+  styleUrl: './gestion-permissions.component.css'
 })
-export class GestionRolesComponent {
+export class GestionPermissionsComponent {
   showArea = false;
   newRole = { titre: '', description: '', assigner: false };
   roles = [
-    { titre: 'Opex', description: 'Opex', assigner: false },
-    { titre: 'Contre-Maitre', description: 'Contre-Maitre', assigner: false },
-    { titre: 'Chef-Segment', description: 'Chef-Segment', assigner: false },
-    { titre: 'Expert', description: 'Expert', assigner: false },
-    { titre: 'Admin', description: 'Admin', assigner: false },
-    { titre: 'Admin-Secondaire', description: 'Admin-Secondaire', assigner: false }
+    { titre: 'Super_Admin_Permission', description: 'Super_Admin_Permission', assigner: false },
+    { titre: 'Consultation_tableau_Bord', description: 'Consultation_tableau_Bord', assigner: false },
+    { titre: 'Gestion_Des_Idées', description: 'Gestion_Des_Idées', assigner: false },
+    { titre: 'Validation_Idées', description: 'Validation_Idées', assigner: false },
+    { titre: 'Exportation_Données', description: 'Exportation_Données', assigner: false }
   ];
 
   Ajouter() {
@@ -63,4 +63,5 @@ export class GestionRolesComponent {
     console.log('Imported roles:', importedRoles);
     this.roles = [...this.roles, ...importedRoles];
   }
+
 }
