@@ -46,6 +46,10 @@ import { IdeesComponent } from './idees/idees.component';
 
 import { ConfigurationApplicationComponent } from './configuration-application/configuration-application.component';
 
+import { GestionRolesComponent } from './gestion-roles/gestion-roles.component';
+
+import { GestionPermissionsComponent } from './gestion-permissions/gestion-permissions.component';
+
 
 const routes: Routes = [
   {
@@ -129,6 +133,18 @@ const routes: Routes = [
   { path: 'configuration-application', 
     component: ConfigurationApplicationComponent
   }
+  ,
+  { path: 'gestion-roles', 
+    component: GestionRolesComponent
+  },
+  { path: 'gestion-permissions',
+    component: GestionPermissionsComponent
+  }
+  ,
+  { path: 'configuration-application',
+    component: ConfigurationApplicationComponent
+  }
+
 
 ];
 

@@ -17,4 +17,8 @@ body{
    padding-top: 20px;
    font-weight: 600;
  }
- 
+
+ .block-container {
+   background-image: url('/assets/images/bg.jpg');
+   background-size: cover;
+}

@@ -82,6 +82,10 @@ export class HeaderComponent {
     this.router.navigate(['structure']);
   }
 
+  navigateToRole(){
+    this.router.navigate(['gestion-roles']);
+  }
+
   navigateToPlant(){
     this.router.navigate(['structure-plant']);
   }
@@ -100,6 +104,12 @@ export class HeaderComponent {
 
   navigateToIdees(){
     this.router.navigate(['idees']);
+  }
+  navigateToPermission(){
+    this.router.navigate(['gestion-permissions']);
+  }
+  navigateToConfiguration(){
+    this.router.navigate(['configuration-application']);
   }
     
 

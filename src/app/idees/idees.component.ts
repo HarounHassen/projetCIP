@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrl: './idees.component.css'
 })
 export class IdeesComponent {
+modifier() {
+throw new Error('Method not implemented.');
+}
 
 
   constructor(private router : Router){
