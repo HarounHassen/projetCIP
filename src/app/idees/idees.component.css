@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to left , #77E4C8 ,#36C2CE , #478CCF , #4535C1);
+    background:  #002857;
     height: 100vh;
 
 }
@@ -14,6 +14,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: white;
+    max-width: 1500px;
 }
 
 .buttons-container {
@@ -38,16 +39,19 @@ a {
 
 .titre {
     color: #050C9C;
+    padding-bottom: 5px;
 }
 
 th, td {
     text-align: center;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 0px;
     font-size: 16px;
+
 }
 
 th {
-    width: 12%;
+    width: 10%;
     position: sticky;
     top: 0;
     
@@ -55,8 +59,7 @@ th {
 
 table {
     width: 100%;
-    table-layout: fixed;
-
+    table-layout: fixed; 
 }
 
 .th-td {
@@ -85,4 +88,98 @@ a{
     padding-right: 5px;
     padding-left: 5px;
 }
+
+
+.refuser{
+    color: rgb(190, 7, 7);
+    border-radius: 15px !important;
+    border: 1px solid rgb(190, 7, 7);
+    background-color: lighten(rgb(190, 7, 7),58%);
+
+    margin: 0;
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+    width: 152px;
+}
+
+.valider{
+    color: rgb(88, 160, 66);
+    border-radius: 15px !important;
+    border: 1px solid rgb(88, 160, 66);
+    background-color: lighten(rgb(88, 160, 66),50%);
+
+    margin: 0;
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+    width: 152px;
+}
+.attente{
+    color: #ff7514;
+    border-radius: 15px !important;
+    border: 1px solid #ff7514;
+    background-color: lighten(#ff7514,47%);
+
+    margin: 0;
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+    width: 152px;
+}
+.selectionner{
+    color: #0064c8;
+    border-radius: 15px !important;
+    border: 1px solid #0064c8;
+    background-color: lighten(#0064c8,47%);
+
+    margin: 0;
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+    width: 152px;
+}
+.export-button{
+    background-color: #ff7514;
+    color: white;
+}
+.realiser{
+    color: #00b2ff;
+    border-radius: 15px !important;
+    border: 1px solid #00b2ff;
+    background-color: lighten(#00b2ff,47%);
+
+    margin: 0;
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+    width: 152px;
+}
+
+.preselectionner{
+    color: #050C9C;
+    border-radius: 15px !important;
+    border: 1px solid #050C9C;
+    background-color: lighten(#050C9C,47%);
+
+    margin: 0;
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+    width: 152px;
+}
+
+
 

@@ -1,16 +1,25 @@
 <body>
+    <div class="leoni">
+        <img src="../assets/images/Leoni.png" alt="" width="120px">
+    </div>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <div class="row border rounded-4 p-3 bg-white shadow box-area">
+        <div class="row border rounded-4 p-3 bg-white shadow box-area card-container">
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box block-container"></div>
             <div class="col-md-6 right-box">
                 <div class="row align-items-center">
                     <div class="header-text mb-4">
-                        <h3>Bienvenu!</h3>
+                        <div class="logo">
+                            <img src="../assets/images/logo.png" width="100px" alt="">
+                        </div> 
+                        <div class="Bienvenue">
+                            <h3 style="color: #002857;"> Bienvenue!</h3>
+                        </div>
+                        
                         <p>Veuillez vous connecter avec vos informations personnelles.</p>
                     </div>
                     <p class="header-text mb-3" [ngClass]="{ 'error1': isUserEmpty }">{{usernameLabel}}</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Nom d'utilisateur" [(ngModel)]="username">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email" [(ngModel)]="username">
                     </div>
                     <p class="header-text mb-3" [ngClass]="{ 'error2': isPasswordEmpty }">{{passwordLabel}}</p>
                     <div class="input-group mb-1">
@@ -22,7 +31,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <button class="btn btn-lg btn-primary w-100 fs-6" (click)="isEmpty()">se connecter</button>
+                        <button class="btn btn-lg btn-1 w-100 fs-6" (click)="isEmpty()">se connecter</button>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class AuthentificationPageComponent {
   username: string = '';  
   password: string = '';  
-  usernameLabel: string = "Nom d'utilisateur";
+  usernameLabel: string = "Email";
   passwordLabel: string = 'Mot de passe';
   isUserEmpty: boolean = false;
   isPasswordEmpty: boolean = false;
@@ -19,11 +19,11 @@ export class AuthentificationPageComponent {
 
   isEmpty() {
     if (!this.username) {
-      this.usernameLabel = "Veuillez entrer le nom d'utilisateur";
+      this.usernameLabel = "Veuillez entrer votre Email";
       this.isUserEmpty = true ;
 
     } else {
-      this.usernameLabel = "Nom d'utilisateur";
+      this.usernameLabel = "Email";
       this.isUserEmpty = false ;
 
     }

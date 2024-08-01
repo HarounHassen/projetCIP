@@ -5,6 +5,8 @@
                     <input type="search" placeholder="cherchez" class="form-control form-control-lg bg-light fs-6">
                     <button class="btn   btn-outline-primary w-50 fs-6">Cherchez</button>
                     <button class="btn  btn-dark w-50 fs-6" (click)="Ajouter()">Ajouter Utilisateur</button>
+                    <button class="btn btn-primary w-50 fs-6" (click)="fileInput.click()">Charger Données</button>
+           <input type="file" #fileInput accept=".xlsx, .xls" style="display: none;" (change)="onFileChange($event)">
                </div>
                <div class="select-container ">
                     <select class="form-select" name="" id="">

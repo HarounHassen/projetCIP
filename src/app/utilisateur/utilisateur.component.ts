@@ -18,4 +18,13 @@ export class UtilisateurComponent {
   throw new Error('Method not implemented.');
   }
 
+  onFileChange(event: any) {
+    console.log('File change event triggered');
+    const target: DataTransfer = <DataTransfer>(event.target);
+    if (target.files.length !== 1) {
+      console.error('Cannot use multiple files');
+      return;
+    }
+
+}
 }

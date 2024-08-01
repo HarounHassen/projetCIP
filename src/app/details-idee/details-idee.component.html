@@ -1,41 +1,81 @@
 <body>
-     <div class="container">
-         <div class="form-section">
-             <h2>Détails d'idée</h2>
-             <div class="info-section">
-                 <div class="employee-info">
-                     <h4>Informations concernant l'employé:</h4>
-                     <p>Nom & prénom : --</p>
-                     <p>Matricule : --</p>
-                     <p>Téléphone : --</p>
-                     <p>Segment : Segment 1</p>
-                     <p>Ligne : Ligne 1</p>
-                 </div>
-                 <div class="idea-info">
-                     <h4>Information concernant l'idée:</h4>
-                     <p>Date idée : </p>
-                     <p>Type idée : </p>
-                     <p>Motifs : </p>
-                     <p>Contre maitre : </p>
-                     <p>Chef Segment : </p>
-                     <p>Expert : </p>
-                 </div>
-             </div>
-             <textarea placeholder="Description détaillée ...."></textarea>
-             <div class="rating-section">
-                 <div class="rating">
-                     <label>Originalité de l'idée : </label>
-                     <input type="number" min="0" max="10"> /10
-                 </div>
-                 <div class="rating" style="margin-left: 20px ;">
-                     <label> Impact sur plant:</label>
-                     <input type="number" min="0" max="10">/10
-                 </div>
-                 <div class="total-rating">
-                     Note Total : ..........
-                 </div>
-                 <button class="btn btn-primary">Etat</button>
-             </div>
-         </div>
-     </div>
- </body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Détails d'idée</h2>
+            <div class="info-section">
+                <div class="employee-info">
+                    <h4>Informations concernant l'employé:</h4>
+                    <p>Nom & prénom : --</p>
+                    <p>Matricule : --</p>
+                    <p>Téléphone : --</p>
+                    <p>Segment : Segment 1</p>
+                    <p>Ligne : Ligne 1</p>
+                </div>
+                <div class="idea-info">
+                    <h4>Information concernant l'idée:</h4>
+                    <p>Date idée : </p>
+                    <p>Type idée : </p>
+                    <p>Motifs : </p>
+                    <p>Contre maitre : </p>
+                    <p>Chef Segment : </p>
+                    <p>Expert : </p>
+                </div>
+            </div>
+            <textarea placeholder="Description détaillée ...."></textarea>
+            <div class="checkbox-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="validation" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Idée Validée
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="validation" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Idée non Validée
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Generalisable" id="flexRadioDefault3">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        Géneralisable
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Generalisable" id="flexRadioDefault4" checked>
+                    <label class="form-check-label" for="flexRadioDefault4">
+                        Non Géneralisable
+                    </label>
+                </div>
+            </div>
+            <div class="upload-section">
+                <div class="upload-button">
+                    <label for="uploadPictures">
+                        Joindre des images
+                    </label>
+                    <input type="file" id="uploadPictures" multiple accept="image/*">
+                </div>
+                <div class="upload-button">
+                    <label for="uploadKaizen">
+                        Joindre la carte kaizen
+                    </label>
+                    <input type="file" id="uploadKaizen" accept=".xlsx">
+                </div>
+            </div>
+            <div class="rating-section">
+                <div class="rating">
+                    <label>Originalité de l'idée : </label>
+                    <input type="number" min="0" max="10"> /10
+                </div>
+                <div class="rating" style="margin-left: 20px;">
+                    <label>Impact sur plant:</label>
+                    <input type="number" min="0" max="10">/10
+                </div>
+                <div class="total-rating">
+                    Note Total : ..........
+                </div>
+                <button class="btn btn-primary">Etat</button>
+            </div>
+        </div>
+    </div>
+</body>

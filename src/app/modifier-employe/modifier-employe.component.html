@@ -1,0 +1,58 @@
+<body>
+     <div class="container">
+         <div class="input-container border rounded-4 p-4 bg-white">
+             <h5>Modifier Employe</h5><br>
+             <p [ngClass]="{'error1' : matriculeEmpty}">{{matriculelabel}}</p>
+             <input type="text" placeholder="Matricule" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="matricule">
+             
+             <div class="name-surname-container">
+                 <div class="name-container">
+                     <p [ngClass]="{'error2' : nameEmpty}">{{nameLabel}}</p>
+                     <input type="text" placeholder="Nom" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="name">
+                 </div>
+                 <div class="surname-container">
+                     <p [ngClass]="{'error2' : surnameEmpty}">{{surnameLabel}}</p>
+                     <input type="text" placeholder="Prénom" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="surname">
+                 </div>
+             </div>
+ 
+             <div class="phone-date-container">
+                 <div class="phone-container">
+                     <p [ngClass]="{'error2' : phoneEmpty}">{{phoneLabel}}</p>
+                     <input type="text" placeholder="Téléphone" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="phone">
+                 </div>
+                 <div class="date-container">
+                     <p [ngClass]="{'error2' : hireDateEmpty}">{{hireDateLabel}}</p>
+                     <input type="date" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="hireDate">
+                 </div>
+             </div>
+ 
+             <div class="site-plant-container">
+                 <div class="site-container">
+                     <p [ngClass]="{'error2' : siteEmpty}">{{siteLabel}}</p>
+                     <input type="text" placeholder="Site" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="site">
+                 </div>
+                 <div class="plant-container">
+                     <p [ngClass]="{'error2' : plantNameEmpty}">{{plantNamelabel}}</p>
+                     <input type="text" placeholder="Nom de plant" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="plantName">
+                 </div>
+             </div>
+ 
+             <div class="line-segment-container">
+                 <div class="line-container">
+                     <p [ngClass]="{'error2' : lineEmpty}">{{lineLabel}}</p>
+                     <input type="number" placeholder="Nombre de Lignes" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="line">
+                 </div>
+                 <div class="segment-container">
+                     <p [ngClass]="{'error2' : segmentEmpty}">{{segmentLabel}}</p>
+                     <input type="number" placeholder="Nombre de Segments" class="form-control form-control-lg bg-light fs-6" [(ngModel)]="segment">
+                 </div>
+             </div>
+             
+             <div class="btn-container">
+                 <button class="btn btn-primary fs-6" (click)="isEmpty()">Modifier</button>
+             </div>
+         </div>
+     </div>
+ </body>
+ 

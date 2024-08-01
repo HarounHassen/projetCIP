@@ -11,7 +11,6 @@ export class AcceuilComponent {
   isEmailEmpty: boolean = false;
   textArea: string = '';
 
-
   isEmpty() {
     if(!this.textArea){
       this.textAreaLabel = "Veuillez entrer votre idée" ;

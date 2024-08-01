@@ -8,61 +8,90 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-
-  menuIsVisible: boolean = false;
-  structureIsVisible: boolean = false;
-  adminIsvisible: boolean = false;
-
   menu: any = {
-    LanguageDropdown: false,
-    UserDropdown: false,
-    menuDropdown: false
+    userDropdown: false,
+    LanguageDropdown: false
   };
 
   structure: any = {
     structureDropdown: false
   };
 
+  utilisateur: any = {
+    utilisateurDropdown: false
+  };
+
+  idees: any = {
+    ideesDropdown: false
+  };
+
   admin: any = {
-    adminDropdown : false  
-  }
+    adminDropdown: false  
+  };
+
+  notification: any = {
+    notificationDropdown: false  
+  };
 
   constructor(private router: Router) {}
 
-  toggleMenu(menu: any, event: MouseEvent) {
+  toggleMenu(menu: string, event: MouseEvent) {
     this.menu[menu] = !this.menu[menu];
+    this.closeOtherDropdowns(menu);
+  }
 
-    Object.keys(this.menu).forEach(key => {
-      if (menu != key) {
-        this.menu[key] = false;
+  toggleUserDropdown(event: MouseEvent) {
+    this.menu.userDropdown = !this.menu.userDropdown;
+    this.closeOtherDropdowns('userDropdown');
+  }
+
+  toggleAdminDropdown() {
+    this.admin.adminDropdown = !this.admin.adminDropdown;
+    this.closeOtherDropdowns('adminDropdown');
+  }
+
+  toggleNotificationDropdown(event: MouseEvent) {
+    this.notification.notificationDropdown = !this.notification.notificationDropdown;
+    this.closeOtherDropdowns('notificationDropdown');
+  }
+
+  toggleStructureDropdown(event: MouseEvent) {
+    this.structure.structureDropdown = !this.structure.structureDropdown;
+    this.closeOtherDropdowns('structureDropdown');
+  }
+
+  closeOtherDropdowns(openedDropdown: string) {
+    const dropdowns = ['userDropdown', 'structureDropdown', 'notificationDropdown', 'LanguageDropdown', 'adminDropdown', 'utilisateurDropdown', 'ideesDropdown'];
+    dropdowns.forEach(dropdown => {
+      if (dropdown !== openedDropdown) {
+        if (this.menu[dropdown] !== undefined) {
+          this.menu[dropdown] = false;
+        } else if (this.structure[dropdown] !== undefined) {
+          this.structure[dropdown] = false;
+        } else if (this.notification[dropdown] !== undefined) {
+          this.notification[dropdown] = false;
+        } else if (this.admin[dropdown] !== undefined) {
+          this.admin[dropdown] = false;
+        } else if (this.utilisateur[dropdown] !== undefined) {
+          this.utilisateur[dropdown] = false;
+        } else if (this.idees[dropdown] !== undefined) {
+          this.idees[dropdown] = false;
+        }
       }
     });
   }
 
-  showAdminDropdown(){
-    this.admin.adminDropdown = true ;
-  }
-
-  hideAdminDropdown(){
-    this.admin.adminDropdown = false ;
-  }
-
-  showStructureDropdown() {
-    this.structure.structureDropdown = true;
-  }
-
-  hideStructureDropdown() {
-    this.structure.structureDropdown = false;
-  }
-
   @HostListener('document:click', ['$event'])
-  closemenus(event: Event) {
+  closeMenus(event: Event) {
     const target = event.target as HTMLElement;
     if (!target.closest('.dropdown')) {
-      this.menu.LanguageDropdown = false;
-      this.menu.UserDropdown = false;
-      this.menu.menuDropdown = false;
+      this.menu.userDropdown = false;
       this.structure.structureDropdown = false;
+      this.utilisateur.utilisateurDropdown = false;
+      this.idees.ideesDropdown = false;
+      this.admin.adminDropdown = false;
+      this.notification.notificationDropdown = false;
+      this.menu.LanguageDropdown = false;
     }
   }
 
@@ -82,11 +111,11 @@ export class HeaderComponent {
     this.router.navigate(['structure']);
   }
 
-  navigateToRole(){
+  navigateToRole() {
     this.router.navigate(['gestion-roles']);
   }
 
-  navigateToPlant(){
+  navigateToPlant() {
     this.router.navigate(['structure-plant']);
   }
 
@@ -94,7 +123,7 @@ export class HeaderComponent {
     this.router.navigate(['structure-segment']);
   }
 
-  navigateToLigne(){
+  navigateToLigne() {
     this.router.navigate(['ligne']);
   }
 
@@ -102,15 +131,15 @@ export class HeaderComponent {
     this.router.navigate(['utilisateur']);
   }
 
-  navigateToIdees(){
+  navigateToIdees() {
     this.router.navigate(['idees']);
   }
-  navigateToPermission(){
+
+  navigateToPermission() {
     this.router.navigate(['gestion-permissions']);
   }
-  navigateToConfiguration(){
+
+  navigateToConfiguration() {
     this.router.navigate(['configuration-application']);
   }
-    
-
 }

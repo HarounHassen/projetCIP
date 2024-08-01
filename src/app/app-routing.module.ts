@@ -49,6 +49,7 @@ import { ConfigurationApplicationComponent } from './configuration-application/c
 import { GestionRolesComponent } from './gestion-roles/gestion-roles.component';
 
 import { GestionPermissionsComponent } from './gestion-permissions/gestion-permissions.component';
+import { ModifierEmployeComponent } from './modifier-employe/modifier-employe.component';
 
 
 const routes: Routes = [
@@ -143,6 +144,10 @@ const routes: Routes = [
   ,
   { path: 'configuration-application',
     component: ConfigurationApplicationComponent
+  },
+  {
+    path: 'modifier-employe',
+    component: ModifierEmployeComponent
   }
 
 

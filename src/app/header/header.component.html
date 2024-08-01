@@ -1,55 +1,83 @@
 <nav class="navbar">
-    <div class="container">
-        <div class="logo">
-            <h4><a type="button" (click)="navigateToHome()"><img src="../assets/images/letter-c.png" alt=""></a>CIP</h4>
-        </div>
-        <div class="list-container">
-            
+    <div class="navbar-container">
+      <div class="logo">
+        <h4><a type="button" (click)="navigateToHome()"><img src="../assets/images/logo.png" alt="" width="75px"></a></h4>
+      </div>
+      <div class="d-flex justify-content-end">
+        <div class="list-container1">
+          <div class="first-half">
             <div class="dropdown">
-                <a type="button" (click)="toggleMenu('LanguageDropdown', $event)" class="nav-item item">Language</a>
-                <div id="LanguageDropdown" class="dropdown-content" *ngIf="menu.LanguageDropdown">
-                    <a type="button" class="item">Anglais</a>
-                    <a class="item" type="button">Français</a>
-                    <a class="item" type="button">Arabe</a>
-                </div>
+              <a type="button" (click)="toggleStructureDropdown($event)" class="nav-item item">Structure</a>
+              <div id="structureDropdown" class="dropdown-content" *ngIf="structure.structureDropdown">
+                <a class="item" type="button" (click)="navigateToStructure()">Structure</a>
+                <a class="item" type="button" (click)="navigateToPlant()">Plant</a>
+                <a class="item" type="button" (click)="navigateToSegment()">Segment</a>
+                <a class="item" type="button" (click)="navigateToLigne()">Ligne</a>
+              </div>
             </div>
-            <a type="button" class="nav-item"><img src="../assets/images/notification.png" width="30px" alt=""></a>
-            <div class="dropdown">
-                <a type="button" class="nav-item item" (click)="toggleMenu('UserDropdown', $event)">Nom d'utilisateur <img src="../assets/images/user.png" alt="" width="30px"></a>
-                <div id="UserDropdown" class="dropdown-content" *ngIf="menu.UserDropdown">
-                    <a class="item" type="button" (click)="navigateToProfile()">Profile</a>
-                    <a class="item" type="button" (click)="navigateToParametre()">Paramétres</a>
-                    <a class="item" type="button" (click)="navigateToHome()">Déconnexion</a>
-                </div>
+            <a type="button" (click)="navigateToUtilisateur()" class="nav-item item">Utilisateur</a>
+            <div id="utilisateurDropdown" class="dropdown-content" *ngIf="utilisateur.utilisateurDropdown">
+              <a class="item" type="button" (click)="navigateToUtilisateur()">Utilisateur</a>
+            </div>
+            <a type="button" (click)="navigateToIdees()" class="nav-item item">Idées</a>
+            <div id="ideesDropdown" class="dropdown-content" *ngIf="idees.ideesDropdown">
+              <a class="item" type="button" (click)="navigateToIdees()">Idées</a>
             </div>
             <div class="dropdown">
-                <a type="button" (click)="toggleMenu('menuDropdown', $event)" class="nav-item item">Menu</a>
-                <div class="dropdown-content" id="menuDropdown" *ngIf="menu.menuDropdown">
-                    <a class="item" type="button">Dashboard</a>
-                    <div class="dropdown" 
-                         (mouseenter)="showStructureDropdown()"
-                         (mouseleave)="hideStructureDropdown()">
-                        <a class="item" type="button" (click)="navigateToStructure()">Structure</a>
-                        <div id="structureDropdown" *ngIf="structure.structureDropdown">
-                            <a class="item" type="button" (click)="navigateToPlant()">Plant</a>
-                            <a class="item" type="button" (click)="navigateToSegment()">Segment</a>
-                            <a class="item" type="button" (click)="navigateToLigne()">Ligne</a>
-                        </div>
-                    </div>   
-                    <a class="item" type="button" (click)="navigateToUtilisateur()">Utilisateur</a>
-                    <a class="item" type="button" (click)="navigateToIdees()">Idées</a>
-                    <div class="dropdown"
-                        (mouseenter)="showAdminDropdown()"
-                        (mouseleave)="hideAdminDropdown()">
-                        <a class="item" type="button">Admin</a>
-                        <div id="adminDropdown" *ngIf="admin.adminDropdown">
-                            <a class="item" type="button" (click)="navigateToRole()">Gestion des Roles</a>
-                            <a class="item" type="button" (click)="navigateToPermission()">Gestion des Permissions</a>
-                            <a class="item" type="button" (click)="navigateToConfiguration()">Configuration de l'application</a>
-                        </div>
+              <a type="button" (click)="toggleAdminDropdown()" class="nav-item item">Admin</a>
+              <div id="adminDropdown" class="dropdown-content" *ngIf="admin.adminDropdown">
+                <a class="item" type="button" (click)="navigateToRole()">Gestion des Roles</a>
+                <a class="item" type="button" (click)="navigateToPermission()">Gestion des Permissions</a>
+                <a class="item" type="button" (click)="navigateToConfiguration()">Configuration de l'application</a>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a type="button" (click)="toggleMenu('LanguageDropdown', $event)" class="nav-item item">Anglais</a>
+            <div id="LanguageDropdown" class="dropdown-content" *ngIf="menu.LanguageDropdown">
+              <a type="button" class="item">Anglais</a>
+              <a class="item" type="button">Français</a>
+              <a class="item" type="button">Arabe</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a type="button" class="nav-item" (click)="toggleNotificationDropdown($event)">
+              <img src="../assets/images/notification.png" width="35px" alt="">
+            </a>
+            <div id="notificationDropdown" class="dropdown-content" *ngIf="notification.notificationDropdown">
+              <div class="notification-header">Vous avez 1 notifications</div>
+                <div class="notification-item" type="button">
+                    <div class="notification-icon">
+                        <img src="../assets/images/bell.png" alt="Notification Icon">
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Nouvelle idée</div>
+                        <div class="notification-date">idée 24/07/2024</div>
+                        <div class="notification-time">24/07/2024 01:46 PM</div>
                     </div>
                 </div>
+                <div class="notification-item" type="button">
+                    <div class="notification-icon">
+                        <img src="../assets/images/bell.png" alt="Notification Icon">
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Nouvelle idée</div>
+                        <div class="notification-date">idée 04/09/2024</div>
+                        <div class="notification-time">24/07/2024 01:46 PM</div>
+                    </div>
+                </div>
+                <a href="#" class="view-all">Voir toutes les notifications</a>
             </div>
+          </div>
+          <div class="dropdown">
+            <a type="button" class="nav-item item" (click)="toggleUserDropdown($event)">Utilisateur <img src="../assets/images/user.png" alt="" width="35px"></a>
+            <div id="userDropdown" class="dropdown-content" *ngIf="menu.userDropdown">
+              <a class="item" type="button" (click)="navigateToProfile()">Profile</a>
+              <a class="item" type="button" (click)="navigateToParametre()">Paramétres</a>
+              <a class="item" type="button" (click)="navigateToHome()">Déconnexion</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</nav>
+  </nav>

@@ -54,3 +54,6 @@ th, td {
 th {
     width: 25%;
 }
+.select-container{
+    display: flex;
+}

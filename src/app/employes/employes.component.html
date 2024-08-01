@@ -1,0 +1,119 @@
+<body>
+     <div class="container d-flex justify-content-center align-items-center min-vh-100">
+         <div class="table-container border rounded-4 p-3">
+             <div class="buttons-container">
+                    <input type="search" placeholder="cherchez" class="form-control form-control-lg bg-light fs-6">
+                    <button class="btn btn-outline-primary w-50 fs-6">Cherchez</button>
+                    <button class="btn btn-dark w-50 fs-6">Export</button>
+                    <button class="btn btn-primary w-50 fs-6" (click)="fileInput.click()">Charger Données</button>
+           <input type="file" #fileInput accept=".xlsx, .xls" style="display: none;" (change)="onFileChange($event)">
+               </div>
+             <div class="select-container">
+                 <select class="form-select" name="" id="">
+                     <option value="0">Site</option>
+                 </select>
+                 <select class="form-select" name="" id="">
+                     <option value="0">Plant</option>
+                 </select>
+                 <select class="form-select" name="" id="">
+                     <option value="0">Segment</option>
+                 </select>
+                 <select class="form-select" name="" id="">
+                     <option value="0">Ligne</option>
+                 </select>
+             </div>
+ 
+             <div class="table-wrapper" style="max-height: 500px; overflow-y: auto; width: 100%;">
+                 <table class="table">
+                     <thead>
+                         <tr>
+                             <th scope="col" class="titre th-td">Matricule</th>
+                             <th scope="col" class="titre">employé(e)</th>
+                             <th scope="col" class="titre">Site</th>
+                             <th scope="col" class="titre th-td">Plant</th>
+                             <th scope="col" class="titre th-td">Segment</th>
+                             <th scope="col" class="titre">Linge</th>
+                             <th scope="col" class="titre">Contre Maitre</th>
+                             <th scope="col" class="titre Actions">Actions</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td scope="row" type="number">123456</td>
+                             <td>Maria</td>
+                             <td>Test</td>
+                             <td>Test plant</td>
+                             <td>Test segment</td>
+                             <td>Test ligne</td>
+                             <td>Contre maitre</td>
+                             <td>
+                                 <a type="button"><img src="../assets/images/edit.png" (click)="modifier()" width="30px"></a>
+                             </td>
+                         </tr>
+                         <tr>
+                              <td scope="row" type="number">123456</td>
+                              <td>Maria</td>
+                              <td>Test</td>
+                              <td>Test plant</td>
+                              <td>Test segment</td>
+                              <td>Test ligne</td>
+                              <td>Contre maitre</td>
+                              <td>
+                                  <a type="button"><img src="../assets/images/edit.png" (click)="modifier()" width="30px"></a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td scope="row" type="number">123456</td>
+                              <td>Maria</td>
+                              <td>Test</td>
+                              <td>Test plant</td>
+                              <td>Test segment</td>
+                              <td>Test ligne</td>
+                              <td>Contre maitre</td>
+                              <td>
+                                  <a type="button"><img src="../assets/images/edit.png" (click)="modifier()" width="30px"></a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td scope="row" type="number">123456</td>
+                              <td>Maria</td>
+                              <td>Test</td>
+                              <td>Test plant</td>
+                              <td>Test segment</td>
+                              <td>Test ligne</td>
+                              <td>Contre maitre</td>
+                              <td>
+                                  <a type="button"><img src="../assets/images/edit.png" (click)="modifier()" width="30px"></a>
+                              </td>
+                         </tr>
+                         <tr>
+                              <td scope="row" type="number">123456</td>
+                              <td>Maria</td>
+                              <td>Test</td>
+                              <td>Test plant</td>
+                              <td>Test segment</td>
+                              <td>Test ligne</td>
+                              <td>Contre maitre</td>
+                              <td>
+                                  <a type="button"><img src="../assets/images/edit.png" (click)="modifier()" width="30px"></a>
+                              </td>
+                         </tr>
+                         <tr>
+                              <td scope="row" type="number">123456</td>
+                              <td>Maria</td>
+                              <td>Test</td>
+                              <td>Test plant</td>
+                              <td>Test segment</td>
+                              <td>Test ligne</td>
+                              <td>Contre maitre</td>
+                              <td>
+                                  <a type="button"><img src="../assets/images/edit.png" (click)="modifier()" width="30px"></a>
+                              </td>
+                          </tr>
+                     </tbody>
+                 </table>
+             </div>
+         </div>
+     </div>
+ </body>
+ 

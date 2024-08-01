@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule} from '@angular/platform-browser'; 
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +34,11 @@ import { DetailsIdeeComponent } from './details-idee/details-idee.component';
 import { GestionRolesComponent } from './gestion-roles/gestion-roles.component';
 import { GestionPermissionsComponent } from './gestion-permissions/gestion-permissions.component';
 import { ConfigurationApplicationComponent } from './configuration-application/configuration-application.component';
+import { EmployesComponent } from './employes/employes.component';
+import { ModifierEmployeComponent } from './modifier-employe/modifier-employe.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { RankingComponent } from './ranking/ranking.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -65,14 +70,21 @@ import { ConfigurationApplicationComponent } from './configuration-application/c
     GestionRolesComponent,
     GestionPermissionsComponent,
     ConfigurationApplicationComponent,
+    EmployesComponent,
+    ModifierEmployeComponent,
+    NotificationsComponent,
+    RankingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule ,
+    FormsModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
